@@ -1,9 +1,18 @@
+import os
+
 def finder(files, queries):
+    path = {}
 
-    """
-    YOUR CODE HERE
-    """
-
+    hashtable = {}
+    q = {}
+    result = []
+    for i in queries:
+        q[i] = []
+    for f in files:
+        hashtable[f] = os.path.basename(f)
+    for key in hashtable:
+        if hashtable[key] in q:
+            result.append(key)
     return result
 
 
