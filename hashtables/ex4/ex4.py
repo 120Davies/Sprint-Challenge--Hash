@@ -1,8 +1,21 @@
 def has_negatives(a):
 
-    """
-    YOUR CODE HERE
-    """
+# I will call my dictionary variable 'hashtable' to make me feel better.
+
+    hashtable = {}
+    result = []
+
+    for i in a:
+        if i != 0:
+
+            # Build dictionary
+            hashtable[i] = True
+
+            # Check dictionary for desired values
+            if hashtable.get(-i, None) is not None:
+
+                # Add values if they are desired
+                result.append(abs(i))
 
     return result
 
